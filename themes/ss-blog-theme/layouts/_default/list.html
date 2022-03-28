@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    {{ range where .Pages "Type" "posts"}}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})</li>
+    {{ end }}
+  </ul>
+</div>
