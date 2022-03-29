@@ -1,10 +1,8 @@
 {{ define "main" }}
-<h2>index{{ .Title}}</h2>
+<h2>index</h2>
 <div class="contents">
-  <ul>
-    {{ range .Data.Pages }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})
-    {{ end }}
-  </ul>
+  {{ range first 10 .Site.RegularPages.ByDate.Reverse }}
+  <a href={{ .Permalink }}>{{ .Name }}</a>
+  {{ end }}
 </div>
 {{ end }}
