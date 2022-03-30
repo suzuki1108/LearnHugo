@@ -2,6 +2,9 @@ baseURL = 'http://blog.techkinoko.com/'
 languageCode = 'ja'
 title = 's.s Tech Blog'
 
+[taxonomies]
+  category = 'categories'
+
 [params]
   author = 'suzuki.s'
   prodYear = '2022'
