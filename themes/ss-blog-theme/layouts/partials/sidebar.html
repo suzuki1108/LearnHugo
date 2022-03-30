@@ -8,8 +8,8 @@
 
   <div class="border-bottom">Categories</div>
   <ul>
-    {{ range where .Pages "Type" "posts" }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})</li>
+    {{ range .Site.Taxonomies.categories.ByCount }}
+      <li><a href="{{ "/categories/" | relURL }}{{ .Name | urlize }}">{{ .Name }}</a></li>
     {{ end }}
   </ul>
 
