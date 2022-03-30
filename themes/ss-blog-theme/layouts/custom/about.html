@@ -1,11 +1,6 @@
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <article>
-          <p>これはaboutページです</p>
-          {{ .Content }} <!-- ここに本文すべてがはいる -->
-        </article>
-        {{- partial "footer.html" . -}}
-    </body>
-</html>
+{{ define "main" }}
+<article class="container d-flex flex-column align-items-center">
+  <p>これはaboutページです</p>
+  {{ .Content }} <!-- ここに本文すべてがはいる -->
+</article>
+{{ end }}

@@ -1,1 +1,16 @@
-<aside class="sidebar">sidebar</aside>
+<div>
+  <div class="border-bottom">Recent Posts</div>
+  <ul>
+    {{ range first 10 .Site.RegularPages.ByDate.Reverse }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})</li>
+    {{ end }}
+  </ul>
+
+  <div class="border-bottom">Categories</div>
+  <ul>
+    {{ range where .Pages "Type" "posts" }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})</li>
+    {{ end }}
+  </ul>
+
+</div>

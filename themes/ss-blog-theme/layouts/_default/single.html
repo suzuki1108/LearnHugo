@@ -1,3 +1,4 @@
+{{ define "main" }}
 <div class="site-content">  
   <h1>{{ .Title }}</h1>   
   <time>{{ .Date.Format "2006-01-02" }}</time>    
@@ -5,3 +6,4 @@
     {{ .Content }} <!-- ここに本文すべてがはいる -->
   </article>
 </div>
+{{ end }}
