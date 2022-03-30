@@ -1,3 +1,10 @@
 baseURL = 'http://blog.techkinoko.com/'
 languageCode = 'ja'
 title = 's.s Tech Blog'
+
+[params]
+  author = 'suzuki.s'
+  prodYear = '2022'
+  contactURL = 'https://techkinoko.com'
+  portfolioURL = 'https://techkinoko.com'
+  githubURL = 'https://github.com/suzuki1108'
